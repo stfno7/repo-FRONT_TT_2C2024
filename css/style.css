@@ -1,0 +1,822 @@
+:root { /** Paleta de colores **/
+    --color-principal: #1D1E1E;
+    --color-secundario: #FFF5DD;
+    --color-texto: #EDC454;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/** Header **/
+header {
+    background-color: transparent;
+    position: absolute; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 25px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-left {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--color-secundario);
+    padding: 5px 10px;
+    transition: color 0.5s ease, background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #555; 
+}
+
+/** Menú hamburguesa **/
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+.cart-icon:hover {
+    color: #555;
+}
+/** Header **/
+
+
+/* Imagen centrada carrusel */
+.image-center {
+    text-align: center;
+    margin: 20px 0;
+    margin-top: 60px;
+}
+
+.centered-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Carrusel de Cards */
+.card-section {
+    width: 520px; 
+    overflow: hidden; 
+    position: relative;
+    margin-top: 20px;
+    border-radius: 1%;
+}
+
+.card-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilos de cada carta */
+.card {
+    min-width: 520px; 
+    background-color: #2e2e2e;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.card-image {
+    width: 200PX;
+    height: auto;
+    margin-left: auto; 
+    border-radius: 2%;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+.card-title {
+    color: var(--color-secundario);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    color: var(--color-secundario);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card-payment {
+    font-size: 15px;
+    color: var(--color-secundario);
+}
+.card-link {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.card-link:hover {
+    background-color: darkorange; 
+}
+
+.grab {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/** Frase motivacional + svg **/
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+}
+
+.quote-container h2 {
+    font-size: 32px;
+    color: var(--color-texto);
+    font-weight: 800;
+    margin: 0;
+}
+/** Frase motivacional + svg **/
+
+/* Estilos para la sección de "¿Qué incluye?" */
+.include {
+    background-color: #2A2A2A;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    color: #FFF5DD;
+  }
+  
+  .include h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFF5DD;
+  }
+  
+  .include-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .include-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #FFF5DD;
+  }
+  
+  .include-card p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    color: #FFF5DD;
+  }
+  
+  .include-square {
+    margin-top: 20px;
+  }
+  
+  .include-square svg {
+    width: 100px;
+    height: 100px;
+  }
+
+/* Estilos para la sección de "¿Qué incluye?" */
+
+
+/** Formulario de contacto **/
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 70px 0px 140px 0px;
+}
+
+#h2-form {
+    color: #1D1E1E;
+    font-weight: 800;
+    text-align: center; 
+}
+
+form {
+    background-color: var(--color-secundario);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px; 
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #1D1E1E;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+input, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #F1CE6F;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background-color: #d3b460;
+    transition: background-color 0.3s;
+}
+
+/** Formulario de contacto **/
+
+
+/* Footer */
+.footer {
+    background-color: var(--color-secundario);
+    color: #1D1E1E;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.footer-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-item {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-item i {
+    margin-right: 8px;
+}
+
+.footer-link {
+    display: block;
+    color: var(--color-principal);
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: grey;
+}
+
+.footer-icon {
+    color: var(--color-principal);
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.footer-icon:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo para el texto adicional */
+.footer-text {
+    text-align: center; 
+    font-size: 12px; 
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+}
+
+/** Footer **/
+
+
+/** Ícono whatsapp fixed **/
+.whatsapp-float {
+    position: fixed;
+    right: 20px; 
+    bottom: 200px; 
+    z-index: 100; 
+    background-color: #25D366;
+    border-radius: 50%; 
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s; 
+}
+
+.whatsapp-icon {
+    color: white;
+    font-size: 27px; 
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); 
+    background-color: #1EBE54;
+}
+/** Ícono whatsapp fixed **/
+
+/** Sobre mi -- ABOUT - sobre-mi.html **/
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.about-me-left, .about-me-right {
+    width: 48%;
+}
+
+.about-me-left h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #fff5dd;
+}
+
+.about-me-left p {
+    color: var(--color-secundario);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-me-right {
+    display: flex;
+    text-align: center;
+    margin: 40px;
+}
+
+.about-me-right h1 {
+    font-size: 28px;
+    color: var(--color-texto);
+    text-align: center;
+}
+/** Sobre mi -- ABOUT - sobre-mi.html **/
+
+/** Collage de imágenes - sobre-mi.html **/
+
+.image-collage {
+    margin-top: 20px;
+}
+.image-wrapper {
+    width: 30%;
+    overflow: hidden;
+    border-radius: 10px; 
+}
+
+.collage-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.collage-image:hover {
+    transform: scale(1.05); 
+}
+.new-image {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/** Collage de imágenes - sobre-mi.html **/
+
+/** Reviews - sobre-mi.html **/
+.reviews {
+    padding: 40px;
+    text-align: center;
+    background-color: var(--color-principal);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.8);
+    margin: 100px 0;
+}
+
+.reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--color-texto); 
+}
+
+.reviews-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+.review {
+    background-color: #2a2b2b; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.review p {
+    font-size: 1rem;
+    color: #ffffff; 
+}
+
+.review span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #d3d3d3; 
+}
+/** Reviews - sobre-mi.html **/
+
+
+/** FAQS - faqs.html **/
+.faqs-section {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 20px;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.5rem;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: var(--color-secundario);
+    line-height: 1.6;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+ /* Estilos para la sección de "¿Qué incluye?" */ 
+
+ /** Media queries **/
+@media screen and (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-left, .about-me-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-me-right h1 {
+        font-size: 22px;
+    }
+
+    .image-collage {
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .image-wrapper {
+        width: 80%; 
+    }
+}
+
+/* Media queries FAQS.html */
+@media (max-width: 768px) {
+    .faqs-section {
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    .faq-item h3 {
+        font-size: 1.4rem; 
+    }
+
+    .faq-item p {
+        font-size: 0.95rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .faqs-section {
+        padding: 10px;
+        margin-top: 30px;
+        text-align: center; 
+    }
+
+    .faq-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .faq-item p {
+        font-size: 0.9rem;
+        line-height: 1.4; 
+    }
+
+    .faq-item {
+        margin-bottom: 15px; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .faqs-section {
+        max-width: 1000px; 
+        padding: 30px;
+    }
+
+    .faq-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .faq-item p {
+        font-size: 1.1rem; 
+    }
+}
+/* Media queries FAQS.html */
+
+/* Media queries contacto.html */
+@media (max-width: 768px) {
+    .contact-form {
+        margin: 100px 0;
+        height: auto;
+    }
+
+    form {
+        width: 280px; 
+        padding: 15px; 
+    }
+
+    #h2-form {
+        font-size: 1.2rem; 
+    }
+
+    input, textarea {
+        font-size: 13px; 
+        padding: 8px; 
+    }
+
+    .submit-btn {
+        font-size: 14px; 
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 90%; 
+    }
+
+    #h2-form {
+        font-size: 1rem; 
+    }
+
+    label {
+        font-size: 13px; 
+    }
+
+    input, textarea {
+        font-size: 12px; 
+        padding: 6px;
+    }
+
+    .submit-btn {
+        font-size: 13px;
+        padding: 7px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact-form {
+        margin-top: 100px;
+    }
+    form {
+        width: 400px; 
+        padding: 30px; 
+    }
+
+    #h2-form {
+        font-size: 1.8rem; 
+    }
+
+    input, textarea {
+        font-size: 16px; 
+        padding: 12px; 
+    }
+
+    .submit-btn {
+        font-size: 16px; 
+        padding: 12px;
+    }
+}
+/* Media queries contacto.html */
+
+
+/* Media queries sobre-mi.html */
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 90px;
+    }
+
+    .about-me-left, .about-me-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-me-right h1 {
+        font-size: 24px;
+    }
+
+    .about-me-left h2 {
+        font-size: 22px;
+    }
+
+    .about-me-left p {
+        font-size: 14px;
+    }
+
+    .image-wrapper {
+        width: 45%; 
+    }
+
+    .reviews {
+        padding: 20px;
+    }
+
+    .reviews h2 {
+        font-size: 1.5rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .review p {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .about-me {
+        padding: 15px;
+    }
+
+    .about-me-left h2 {
+        font-size: 20px;
+    }
+
+    .about-me-left p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .about-me-right h1 {
+        font-size: 20px;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .reviews {
+        padding: 15px;
+    }
+
+    .reviews-grid {
+        gap: 10px;
+    }
+
+    .review p {
+        font-size: 0.8rem;
+    }
+
+    .review span {
+        font-size: 0.8rem;
+    }
+}
+/* Media queries sobre-mi.html */
+/* Menú Hamburguesa */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 998;
+    }
+    .nav-left.show {
+        display: flex;
+    }
+    .nav-left li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
